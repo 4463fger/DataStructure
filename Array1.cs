@@ -3,19 +3,19 @@ using System.Text;
 
 namespace List
 {
-    class MyArrayList<T>
+    class Array1<T>
     {
         private T[] _data;//数组存放的数据
         private int _size;//实际数组存放元素的个数
 
         //构造函数，初始化数组的容量
-        public MyArrayList(int capacity)
+        public Array1(int capacity)
         {
             _data = new T[capacity];
             _size = 0;
         }
         //无参数的构造函数(这里使用this复用带参的构造函数,默认传入参数10)
-        public MyArrayList() : this(10) { }
+        public Array1() : this(10) { }
 
         //获取动态数组的容量
         public int Capacity => _data.Length;
@@ -138,7 +138,7 @@ namespace List
         public override string ToString()
         {
             StringBuilder res = new StringBuilder();
-            res.Append(string.Format("MyArrayList: count={0} capacity={1}\n", _size, _data.Length));
+            //res.Append(string.Format("MyArrayList: count={0} capacity={1}\n", _size, _data.Length));
             
             res.Append("[");
             for (int i = 0; i < _size; i++)

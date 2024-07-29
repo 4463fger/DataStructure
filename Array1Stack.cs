@@ -1,28 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace List
+﻿namespace List
 {
     //数组栈,由动态数组实现
-    class ArrayIStack<T>:IStack<T>
+    class Array1Stack<T>:IStack<T>
     {
-        private MyArrayList<T> arr;
+        private Array1<T> arr;
         //带参构造函数
-        public ArrayIStack(int capacity)
+        public Array1Stack(int capacity)
         {
-            arr = new MyArrayList<T>(capacity);
+            arr = new Array1<T>(capacity);
         }
         //不带参构造函数
-        public ArrayIStack()
+        public Array1Stack()
         {
-            arr = new MyArrayList<T>();
+            arr = new Array1<T>();
         }
 
-        public int Count {get { return arr.Count; } }
-        public bool IsEmpty { get { return arr.IsEmpty; } }
+        public int Count => arr.Count; 
+        public bool IsEmpty =>arr.IsEmpty;
         //添加
         public void Push(T t)
         {
@@ -36,6 +30,15 @@ namespace List
         {
             return arr.RemoveEnd();
         }
-
+        //查看栈顶元素
+        public T Peek()
+        {
+            return arr.GetLast();
+        }
+        //打印方法
+        public override string ToString()
+        {
+            return "Stack" + arr.ToString() + "Top";
+        }
     }
 }

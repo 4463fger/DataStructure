@@ -3,12 +3,12 @@ using System.Text;
 
 namespace List
 {
-    class DoubleLinkedList<T>
+    class LinkedListDouble<T>
     {
         //内部节点类
         private class Node
         {
-            public T data;   //实际存储得数据
+            public T data;   //实际存储的数据
             public Node prev;//用来指向前一个节点
             public Node next;//用来指向下一个节点
 
@@ -37,7 +37,7 @@ namespace List
         private Node Tail; //记录链表的尾部
         private int N;     //链表存储多少元素
 
-        public DoubleLinkedList()
+        public LinkedListDouble()
         {
             //初始化链表,此时全为null
             Head = null;
@@ -208,7 +208,7 @@ namespace List
                 current = current.next;
             }
         }
-        //重写Tostring()
+        //重写To string()
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
