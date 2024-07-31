@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace List
+﻿namespace List
 {
     class LinkedList3Dictionary<Key ,Value> :IDictionary<Key,Value>
     {
@@ -17,29 +11,30 @@ namespace List
 
         public int Count => List.Count;
         public bool IsEmpty => List.IsEmpty;
+
         public void Add(Key key, Value value)
         {
-            throw new NotImplementedException();
+            List.Add(key,value);
         }
 
         public void Remove(Key key)
         {
-            throw new NotImplementedException();
+            List.Remove(key);
         }
 
         public bool ContainsKey(Key key)
         {
-            throw new NotImplementedException();
+           return List.Contains(key);
         }
 
         public Value Get(Key key)
         {
-            throw new NotImplementedException();
+            return List.Get(key);
         }
 
         public void Set(Key key, Value newValue)
         {
-            throw new NotImplementedException();
+           List.Set(key,newValue);
         }
     }
 }

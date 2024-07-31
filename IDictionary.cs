@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace List
+﻿namespace List
 {
     //字典
     interface IDictionary<Key,Value>

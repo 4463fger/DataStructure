@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace List
+﻿namespace List
 {
     //带尾指针的链表队列
     class LinkedList2Queue<T>:IQueue<T>
